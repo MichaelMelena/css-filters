@@ -1,0 +1,12 @@
+.example {
+  border-radius: 0;
+}
+
+.rgb-container {
+  padding: 0;
+  width: 100vw;
+}
+.rgb-container > div {
+  width: 5rem;
+  height: 5rem;
+}
