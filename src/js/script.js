@@ -54,6 +54,7 @@ const SEPIA = "sepia-filter";
 
 //#endregion
 
+//#region slider controls
 let blurRange = document.getElementById("blur");
 let brightnessRange = document.getElementById("brightness");
 let contrastRange = document.getElementById("contrast");
@@ -70,14 +71,30 @@ let dropShadowRangeY = document.getElementById("drop-shadow-y");
 let dropShadowRangeBlur = document.getElementById("drop-shadow-blur");
 let dropShadowColorPicker = document.getElementById("drop-shadow-color");
 
+//#endregion
+
+//#region display filter setting
+let blurText = document.getElementById("blur-text");
+let brightnessText = document.getElementById("brightness-text");
+let contrastText = document.getElementById("contrast-text");
+let grayscaleText = document.getElementById("grayscale-text");
+let huerotateText = document.getElementById("hue-rotate-text");
+let invertText = document.getElementById("invert-text");
+let opacityText = document.getElementById("opacity-text");
+let saturateText = document.getElementById("saturate-text");
+let sepiaText = document.getElementById("sepia-text");
+let dropshadowText = document.getElementById("dropshadow-text");
+
+//#endregion
+
 /**
  *
  * @param {InputEvent} event
  */
 function setBlur(event) {
   let blur = blurRange.value;
-
   let filter = `blur(${blur}px)`;
+  setFilterText(blurText, filter);
   apply(BLUR, filter);
 }
 
@@ -91,6 +108,7 @@ function setBlur(event) {
 function setBrightness(event) {
   let brightness = brightnessRange.value;
   let filter = `brightness(${brightness}%)`;
+  setFilterText(brightnessText, filter);
   apply(BRIGHTNESS, filter);
 }
 
@@ -103,6 +121,7 @@ function setBrightness(event) {
 function setContrast(event) {
   let contrast = contrastRange.value;
   let filter = `contrast(${contrast}%)`;
+  setFilterText(contrastText, filter);
   apply(CONTRAST, filter);
 }
 
@@ -118,6 +137,7 @@ function setDropshadow(event) {
   let blur = dropShadowRangeBlur.value;
   let color = dropShadowColorPicker.value;
   let filter = `drop-shadow(${x}px ${y}px ${blur}px ${color})`;
+  setFilterText(dropshadowText, filter);
   apply(DROPSHADOW, filter);
 }
 
@@ -130,6 +150,7 @@ function setDropshadow(event) {
 function setGrayscale(event) {
   let grayscale = grayscaleRange.value;
   let filter = `grayscale(${grayscale}%)`;
+  setFilterText(grayscaleText, filter);
   apply(GRAYSCALE, filter);
 }
 
@@ -142,6 +163,7 @@ function setGrayscale(event) {
 function setHuerotate(event) {
   let degrees = hueRotateRange.value;
   let filter = `hue-rotate(${degrees}deg)`;
+  setFilterText(huerotateText, filter);
   apply(HUEROTATE, filter);
 }
 
@@ -154,6 +176,7 @@ function setHuerotate(event) {
 function setInvert(event) {
   let invert = invertRange.value;
   let filter = `invert(${invert}%)`;
+  setFilterText(invertText, filter);
   apply(INVERT, filter);
 }
 
@@ -166,6 +189,7 @@ function setInvert(event) {
 function setOpacity(event) {
   let opacity = opacityRange.value;
   let filter = `opacity(${opacity}%)`;
+  setFilterText(opacityText, filter);
   apply(OPACITY, filter);
 }
 
@@ -178,6 +202,7 @@ function setOpacity(event) {
 function setSaturate(event) {
   let saturate = saturateRange.value;
   let filter = `saturate(${saturate}%)`;
+  setFilterText(saturateText, filter);
   apply(SATURATE, filter);
 }
 
@@ -190,6 +215,7 @@ function setSaturate(event) {
 function setSepia(event) {
   let sepia = sepiaRange.value;
   let filter = `sepia(${sepia}%)`;
+  setFilterText(sepiaText, filter);
   apply(SEPIA, filter);
 }
 //#endregion
@@ -238,6 +264,18 @@ function applyFilterToElemetns(elements, filterValue) {
     element.style.filter = filterValue;
   }
 }
+
+/**
+ *
+ * @param {HTMLElement} element
+ * @param {string} filter
+ *
+ * @returns {undefined}
+ */
+function setFilterText(element, filter) {
+  element.innerText = `filter: ${filter}`;
+}
+
 //#endregion
 
 // subsrcibe to events
