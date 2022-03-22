@@ -1,0 +1,25 @@
+
+.rgb-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40rem;
+    height: 15rem;
+}
+
+.rgb-container > div{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 6rem;
+}
+
+.rgb-container > div:first-of-type{
+    background-color: #f00;
+}
+
+.rgb-container > div:nth-of-type(2){
+    background-color: #0f0;
+}
+.rgb-container > div:nth-of-type(3){
+    background-color: #00f;
+}

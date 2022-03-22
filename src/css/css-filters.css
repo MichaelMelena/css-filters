@@ -1,0 +1,52 @@
+/* none */
+
+/* blur */
+
+.blur-filter > div {
+  filter: blur(10px);
+}
+
+/* brightness */
+.brightness-filter > div {
+  filter: brightness(0.4);
+}
+
+/* contrast */
+.contrast-filter > div {
+  filter: contrast(50%);
+}
+
+/* drop-shadow */
+.drop-shadow-filter > div {
+  filter: drop-shadow(16px 16px 20px #000);
+}
+
+/* grayscale */
+.grayscale-filter > div {
+  filter: grayscale(100%);
+}
+
+/* hue-rotate */
+.hue-rotate-filter > div {
+  filter: hue-rotate(90deg);
+}
+
+/* invert */
+.invert-filter > div {
+  filter: invert(75%);
+}
+
+/* opacity */
+.opacity-filter > div {
+  filter: opacity(25%);
+}
+
+/* saturate */
+.saturate-filter > div {
+  filter: saturate(30%);
+}
+
+/* sepia */
+.sepia-filter > div {
+  filter: sepia(60%);
+}
