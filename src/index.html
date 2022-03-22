@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/rgb-example.css" />
     <link rel="stylesheet" href="./css/css-filters.css" />
-    <link rel="stylesheet" href="./css/mobile.css" media="only screen and (max-width: 500px)"/>
+    <link rel="stylesheet" href="./css/mobile.css" media="only screen and (max-width: 722px)" />
     <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="./css/dark-mode.css" />
 </head>
 
@@ -21,6 +21,9 @@
     </nav>
     <article>
         <h2>Examples</h2>
+        <p>
+            The filters are applied to each circle inside individual section. Play with the slider to change the strength of said filter
+        </p>
         <div class="example-container">
             <div class="example">
                 <h3>None</h3>
@@ -61,30 +64,6 @@
                 </div>
                 <input type="range" id="contrast" min="0" max="100" value="50" title="contrast" />
 
-            </div>
-
-            <div class="example">
-                <h3>Drop-shadow</h3>
-                <div class="rgb-container drop-shadow-filter">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div class="shadow-controls">
-                    <div>
-                        <label for="drop-shadow-x">Offset X</label>
-                        <input type="range" id="drop-shadow-x" min="-50" max="50" value="0" title="offset X" />
-                    </div>
-                    <div>
-                        <label for="drop-shadow-y">Offset Y</label>
-                        <input type="range" id="drop-shadow-y" min="-50" max="50" value="0" title="offset Y" />
-                    </div>
-                    <div>
-                        <label for="drop-shadow-blur">Blur</label>
-                        <input type="range" id="drop-shadow-blur" min="0" max="50" value="10" title="blur" />
-                    </div>
-                </div>
-                <input type="color" id="drop-shadow-color" value="#000000" title="color" />
             </div>
 
             <div class="example">
@@ -151,7 +130,31 @@
                 <input type="range" id="sepia" min="0" max="100" value="50" title="sepia" />
 
             </div>
+            <div class="example">
+                <h3>Drop-shadow</h3>
+                <div class="rgb-container drop-shadow-filter">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="shadow-controls">
+                    <div>
+                        <label for="drop-shadow-x">Offset X</label>
+                        <input type="range" id="drop-shadow-x" min="-50" max="50" value="0" title="offset X" />
+                    </div>
+                    <div>
+                        <label for="drop-shadow-y">Offset Y</label>
+                        <input type="range" id="drop-shadow-y" min="-50" max="50" value="0" title="offset Y" />
+                    </div>
+                    <div>
+                        <label for="drop-shadow-blur">Blur</label>
+                        <input type="range" id="drop-shadow-blur" min="0" max="50" value="10" title="blur" />
+                    </div>
+                </div>
+                <input type="color" id="drop-shadow-color" value="#000000" title="color" />
+            </div>
         </div>
+
     </article>
 
     <script src="./js/script.js"></script>

@@ -17,6 +17,11 @@ h1, h2 {
     text-align: center;
 } 
 
+p{
+  max-width: 600px;
+  margin: auto;
+}
+
 .example-container {
   display: flex;
   flex-wrap: wrap;
