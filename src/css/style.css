@@ -2,6 +2,8 @@
   --color: #222;
   --bg-color: #eee;
   --bg-container-color: #ccc;
+  --bg-code-color: #777;
+  --code-color: #a5ff00;
 }
 
 body {
@@ -19,7 +21,8 @@ h2 {
 }
 
 h1 {
-  color: #ffa500;
+  color: #ff8300;
+  font-weight: 800;
 }
 
 p {
@@ -28,9 +31,10 @@ p {
 }
 
 code {
-  color: #ffa500;
-  background-color: #222;
+  color: var(--code-color);
+  background-color: var(--bg-code-color);
   padding: 2px 4px;
+  border-radius: 4px;
 }
 
 .example-container {
