@@ -57,13 +57,18 @@ const SEPIA = "sepia-filter";
 let blurRange = document.getElementById("blur");
 let brightnessRange = document.getElementById("brightness");
 let contrastRange = document.getElementById("contrast");
-let dropShadowRange = document.getElementById("drop-shadow");
 let grayscaleRange = document.getElementById("grayscale");
 let hueRotateRange = document.getElementById("hue-rotate");
 let invertRange = document.getElementById("invert");
 let opacityRange = document.getElementById("opacity");
 let saturateRange = document.getElementById("saturate");
 let sepiaRange = document.getElementById("sepia");
+
+// dropshadow inputs
+let dropShadowRangeX = document.getElementById("drop-shadow-x");
+let dropShadowRangeY = document.getElementById("drop-shadow-y");
+let dropShadowRangeBlur = document.getElementById("drop-shadow-blur");
+let dropShadowColorPicker = document.getElementById("drop-shadow-color");
 
 /**
  *
@@ -107,7 +112,14 @@ function setContrast(event) {
  *
  * @returns {undefined}
  */
-function setDropshadow(event) {}
+function setDropshadow(event) {
+  let x = dropShadowRangeX.value;
+  let y = dropShadowRangeY.value;
+  let blur = dropShadowRangeBlur.value;
+  let color = dropShadowColorPicker.value;
+  let filter = `drop-shadow(${x}px ${y}px ${blur}px ${color})`;
+  apply(DROPSHADOW, filter);
+}
 
 /**
  *
@@ -232,10 +244,15 @@ function applyFilterToElemetns(elements, filterValue) {
 blurRange.addEventListener("input", setBlur);
 brightnessRange.addEventListener("input", setBrightness);
 contrastRange.addEventListener("input", setContrast);
-dropShadowRange.addEventListener("input", setDropshadow);
 grayscaleRange.addEventListener("input", setGrayscale);
 hueRotateRange.addEventListener("input", setHuerotate);
 invertRange.addEventListener("input", setInvert);
 opacityRange.addEventListener("input", setOpacity);
 saturateRange.addEventListener("input", setSaturate);
 sepiaRange.addEventListener("input", setSepia);
+
+// dropshadow
+dropShadowRangeX.addEventListener("input", setDropshadow);
+dropShadowRangeY.addEventListener("input", setDropshadow);
+dropShadowRangeBlur.addEventListener("input", setDropshadow);
+dropShadowColorPicker.addEventListener("input", setDropshadow);

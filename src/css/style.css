@@ -22,8 +22,13 @@ h1, h2 {
   flex-wrap: wrap;
   justify-content: center;
 }
+.shadow-controls{
 
-
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-items: center
+}
 
 .example {
   display: flex;
@@ -32,6 +37,7 @@ h1, h2 {
   background-color: var(--bg-container-color);
   margin: 10px;
   border-radius: 20px;
+  padding-bottom: 10px;
 }
 
 .example > h3{

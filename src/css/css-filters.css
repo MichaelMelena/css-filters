@@ -1,7 +1,6 @@
 /* none */
 
 /* blur */
-
 .blur-filter > div {
   filter: blur(25px);
 }
