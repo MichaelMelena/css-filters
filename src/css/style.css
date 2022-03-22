@@ -13,16 +13,21 @@ body {
   height: 100vh;
 }
 
-h1, h2 {
-    text-align: center;
-} 
+h1,
+h2 {
+  text-align: center;
+}
 
-p{
+h1 {
+  color: #ffa500;
+}
+
+p {
   max-width: 500px;
   margin: auto;
 }
 
-code{
+code {
   color: #ffa500;
   background-color: #222;
   padding: 2px 4px;
@@ -33,12 +38,11 @@ code{
   flex-wrap: wrap;
   justify-content: center;
 }
-.shadow-controls{
-
+.shadow-controls {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  justify-items: center
+  justify-items: center;
 }
 
 .example {
@@ -51,6 +55,6 @@ code{
   padding-bottom: 10px;
 }
 
-.example > h3{
-    margin-bottom: 5px;
+.example > h3 {
+  margin-bottom: 5px;
 }
