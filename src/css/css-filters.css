@@ -3,12 +3,12 @@
 /* blur */
 
 .blur-filter > div {
-  filter: blur(10px);
+  filter: blur(25px);
 }
 
 /* brightness */
 .brightness-filter > div {
-  filter: brightness(0.4);
+  filter: brightness(50%);
 }
 
 /* contrast */
@@ -28,7 +28,7 @@
 
 /* hue-rotate */
 .hue-rotate-filter > div {
-  filter: hue-rotate(90deg);
+  filter: hue-rotate(180deg);
 }
 
 /* invert */

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/rgb-example.css" />
     <link rel="stylesheet" href="./css/css-filters.css" />
-    <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="./css/dark-mode.css"/>
+    <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="./css/dark-mode.css" />
 </head>
 
 <body>
@@ -28,6 +28,7 @@
                     <div></div>
                     <div></div>
                 </div>
+
             </div>
 
             <div class="example">
@@ -37,6 +38,7 @@
                     <div></div>
                     <div></div>
                 </div>
+                <input type="range" id="blur" min="0" max="50" value="25" title="blur" />
             </div>
 
             <div class="example">
@@ -46,6 +48,7 @@
                     <div></div>
                     <div></div>
                 </div>
+                <input type="range" id="brightness" min="0" max="100" value="50" title="brightness" />
             </div>
 
             <div class="example">
@@ -55,6 +58,8 @@
                     <div></div>
                     <div></div>
                 </div>
+                <input type="range" id="contrast" min="0" max="100" value="50" title="contrast" />
+
             </div>
 
             <div class="example">
@@ -64,6 +69,7 @@
                     <div></div>
                     <div></div>
                 </div>
+                <input type="range" id="drop-shadow" min="0" max="100" value="50" title="drop-shadow" />
             </div>
 
             <div class="example">
@@ -73,6 +79,8 @@
                     <div></div>
                     <div></div>
                 </div>
+                <input type="range" id="grayscale" min="0" max="100" value="50" title="grayscale" />
+
             </div>
 
             <div class="example">
@@ -82,6 +90,8 @@
                     <div></div>
                     <div></div>
                 </div>
+                <input type="range" id="hue-rotate" min="0" max="360" value="180" title="hue-rotate" />
+
             </div>
 
             <div class="example">
@@ -90,7 +100,9 @@
                     <div></div>
                     <div></div>
                     <div></div>
+
                 </div>
+                <input type="range" id="invert" min="0" max="100" value="50" title="invert" />
             </div>
 
             <div class="example">
@@ -100,6 +112,7 @@
                     <div></div>
                     <div></div>
                 </div>
+                <input type="range" id="opacity" min="0" max="100" value="50" title="opacity" />
             </div>
 
             <div class="example">
@@ -108,7 +121,9 @@
                     <div></div>
                     <div></div>
                     <div></div>
+
                 </div>
+                <input type="range" id="saturate" min="0" max="100" value="50" title="saturate" />
             </div>
 
             <div class="example">
@@ -118,11 +133,13 @@
                     <div></div>
                     <div></div>
                 </div>
+                <input type="range" id="sepia" min="0" max="100" value="50" title="sepia" />
+
             </div>
         </div>
     </article>
 
-
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
